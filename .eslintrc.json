@@ -1,12 +1,10 @@
 {
-  "extends": "eslint:recommended",
   "parserOptions": {
-    "ecmaVersion": 8
-  },
-  "env": {
-    "es6": true,
-    "jest": true,
-    "node": true
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
   },
   "rules": {
     "eol-last": "error",
