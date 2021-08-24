@@ -7,11 +7,14 @@ export default class CityForm extends Component {
   render() {
     return (
       <>
-        <Form onSubmit={this.props.submitFormHandler}>
+        <Form
+          onSubmit={this.props.submitFormHandler}
+          style={{ justifyContent: 'center', marginTop: '25px', marginBottom: '25px', display: 'flex' }}
+        >
           <FloatingLabel controlId="floatingInput" label="City">
-            <Form.Control type="text" placeholder="City" name="searchQuery" style={{ width: '30%' }} />
+            <Form.Control type="text" placeholder="City" name="searchQuery" style={{}} />
           </FloatingLabel>
-          <Button variant="primary" type="submit" style={{ width: '30%' }}>
+          <Button variant="primary" type="submit" style={{ width: '100px' }}>
             Explore!
           </Button>
         </Form>
