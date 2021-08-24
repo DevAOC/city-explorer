@@ -28,12 +28,32 @@
 
 ### Time Estimates
 
-Name of feature:
+#### Name of feature: Form
 
-Estimate of time needed to complete:
+Estimate of time needed to complete: 1 hour
 
-Start time:
+Start time: 6 pm
 
-Finish time:
+Finish time: 6:45 pm
 
-Actual time needed to complete:
+Actual time needed to complete: 45min
+
+#### Name of feature: Map
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 6:45 pm
+
+Finish time: 7:30 pm
+
+Actual time needed to complete: 45min
+
+#### Name of feature: Error handling
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 8:30 pm
+
+Finish time: 9:00 pm
+
+Actual time needed to complete: 30min
