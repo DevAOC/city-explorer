@@ -1,6 +1,6 @@
 # LAB - 06-10
 
-## Version: 1.0.0
+## Version: 1.2.0
 
 ## Overview:
 
@@ -57,3 +57,19 @@ Start time: 8:30 pm
 Finish time: 9:00 pm
 
 Actual time needed to complete: 30min
+
+## Lab 07 - Request/Response Cycle
+
+![Request/Response Cycle](./img/API-Server-Cycle.png)
+
+### Times Estimates
+
+Name of feature: Weather section
+
+Estimate of time needed to complete: 30 mins
+
+Start time: 12 am
+
+Finish time: 12:30 am
+
+Actual time needed to complete: 30 mins
