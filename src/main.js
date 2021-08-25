@@ -65,7 +65,7 @@ export default class Main extends Component {
                   <Card.Text>Longitude: {this.state.location.lon}</Card.Text>
                 </Card.Body>
               </Card>
-              <Card style={{ margin: 'auto', width: '450px' }}>
+              <Card style={{ padding: '10px', margin: 'auto', width: '450px' }}>
                 <Card.Title>Weather</Card.Title>
                 <Weather weather={this.state.weather} />
               </Card>
