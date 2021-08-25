@@ -4,7 +4,6 @@ import Alert from 'react-bootstrap/Alert';
 import axios from 'axios';
 import CityForm from './cityForm';
 import Weather from './weather';
-import { Row } from 'react-bootstrap';
 
 export default class Main extends Component {
   constructor(props) {

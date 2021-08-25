@@ -63,3 +63,13 @@ Actual time needed to complete: 30min
 ![Request/Response Cycle](./img/API-Server-Cycle.png)
 
 ### Times Estimates
+
+Name of feature: Weather section
+
+Estimate of time needed to complete: 30 mins
+
+Start time: 12 am
+
+Finish time: 12:30 am
+
+Actual time needed to complete: 30 mins
