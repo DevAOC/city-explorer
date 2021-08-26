@@ -89,3 +89,19 @@ Start time: 10 pm
 Finish time: 10:30 pm
 
 Actual time needed to complete: 30 mins
+
+## Lab 09
+
+![WRRC Lab09](./img/lab9-WRRC.png)
+
+### Time Estimates
+
+Name of feature: Lab 9
+
+Estimate of time needed to complete: 1 hour
+
+Start time: 2:45 pm
+
+Finish time: 4 pm
+
+Actual time needed to complete: 1 hour 15 mins
