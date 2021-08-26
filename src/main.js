@@ -27,19 +27,15 @@ export default class Main extends Component {
       const city = await axios.get(
         `https://us1.locationiq.com/v1/search.php?key=${process.env.REACT_APP_CITY_KEY}&q=${searchQuery}&format=json`
       );
+      const weather = await axios.get(
+        `${server}/weather?lat=${this.state.location.lat}&lon=${this.state.location.lon}`
+      );
+      const movies = await axios.get(`${server}/movies?searchQuery=${searchQuery}`);
       this.setState({
         errorMessage: '',
         location: city.data[0],
         map: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_KEY}&center=${city.data[0].lat},${city.data[0].lon}&zoom=12`,
-      });
-      const weather = await axios.get(
-        `${server}/weather?lat=${this.state.location.lat}&lon=${this.state.location.lon}`
-      );
-      this.setState({
         weather: weather.data,
-      });
-      const movies = await axios.get(`${server}/movies?searchQuery=${searchQuery}`);
-      this.setState({
         movies: movies.data,
       });
     } catch (err) {
