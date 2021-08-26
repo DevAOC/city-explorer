@@ -3,6 +3,7 @@ import Card from 'react-bootstrap/Card';
 
 export default class LocationData extends Component {
   render() {
+    console.log(this.props.city);
     return (
       <>
         <Card.Body>

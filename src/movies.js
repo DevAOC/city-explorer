@@ -4,15 +4,8 @@ import Movie from './movie';
 
 export default class Movies extends Component {
   render() {
-    return this.props.movies.map((movie) => {
-      return (
-        <>
-          <Card style={{ width: '600px', margin: 'auto', marginBottom: '25px', marginTop: '25px', padding: '10px' }}>
-            <Card.Title>Movies</Card.Title>
-            <Movie title={movie.title} overview={movie.overview} popularity={movie.popularity} />
-          </Card>
-        </>
-      );
+    return this.props.movies.map((movie, i) => {
+      return <Movie key={i} title={movie.title} overview={movie.overview} popularity={movie.popularity} />;
     });
   }
 }
