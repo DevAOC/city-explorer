@@ -1,5 +1,4 @@
 import { Component } from 'react';
-import Card from 'react-bootstrap/Card';
 import Movie from './movie';
 
 export default class Movies extends Component {
