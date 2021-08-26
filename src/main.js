@@ -4,6 +4,9 @@ import Alert from 'react-bootstrap/Alert';
 import axios from 'axios';
 import CityForm from './cityForm';
 import Weather from './weather';
+import Movies from './movies';
+
+const server = process.env.REACT_APP_BACKEND_URL;
 
 export default class Main extends Component {
   constructor(props) {
@@ -12,6 +15,7 @@ export default class Main extends Component {
       location: {},
       map: '',
       weather: [],
+      movies: [],
       errorMessage: '',
     };
   }
@@ -28,13 +32,17 @@ export default class Main extends Component {
         location: city.data[0],
         map: `https://maps.locationiq.com/v3/staticmap?key=${process.env.REACT_APP_CITY_KEY}&center=${city.data[0].lat},${city.data[0].lon}&zoom=12`,
       });
+      // Just changed from local to server
       const weather = await axios.get(
-        `http://localhost:3001/weather?searchQuery=${searchQuery}&lat=${this.state.location.lat}&lon=${this.state.location.lon}`
+        `${server}/weather?lat=${this.state.location.lat}&lon=${this.state.location.lon}`
       );
       this.setState({
         weather: weather.data,
       });
-      console.log(this.state.weather);
+      const movies = await axios.get(`${server}/movies?searchQuery=${searchQuery}`);
+      this.setState({
+        movies: movies.data,
+      });
     } catch (err) {
       console.log(err);
       this.setState({
@@ -64,9 +72,17 @@ export default class Main extends Component {
                   <Card.Text>Longitude: {this.state.location.lon}</Card.Text>
                 </Card.Body>
               </Card>
-              <Card style={{ padding: '10px', margin: 'auto', width: '450px' }}>
+              <Card
+                style={{ padding: '10px', margin: 'auto', width: '450px', marginTop: '25px', marginBottom: '25px' }}
+              >
                 <Card.Title>Weather</Card.Title>
                 <Weather weather={this.state.weather} />
+              </Card>
+              <Card
+                style={{ width: '600px', margin: 'auto', marginBottom: '25px', marginTop: '25px', padding: '10px' }}
+              >
+                <Card.Title>Movies</Card.Title>
+                <Movies movies={this.state.movies} />
               </Card>
             </>
           )

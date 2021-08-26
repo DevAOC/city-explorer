@@ -79,3 +79,13 @@ Actual time needed to complete: 30 mins
 ![WRRC](./img/lab8-WRRC.png)
 
 ### Time Estimates
+
+Name of feature: Movie Component
+
+Estimate of time needed to complete: 30 mins
+
+Start time: 10 pm
+
+Finish time: 10:30 pm
+
+Actual time needed to complete: 30 mins

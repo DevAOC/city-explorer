@@ -1,14 +1,15 @@
 import { Component } from 'react';
 import Card from 'react-bootstrap/Card';
 
-export default class Weather extends Component {
+export default class Movies extends Component {
   render() {
-    return this.props.weather.map((date) => {
+    return this.props.movies.map((movie) => {
       return (
         <>
           <Card style={{ padding: '10px', width: '85%', margin: 'auto', marginTop: '15px', marginBottom: '15px' }}>
-            <Card.Text>Date: {date.date}</Card.Text>
-            <Card.Text>Description: {date.description}</Card.Text>
+            <Card.Title>{movie.title}</Card.Title>
+            <Card.Text>Overview: {movie.overview}</Card.Text>
+            <Card.Text>Popularity: {movie.popularity}</Card.Text>
           </Card>
         </>
       );
