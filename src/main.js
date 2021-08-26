@@ -6,7 +6,7 @@ import CityForm from './cityForm';
 import Weather from './weather';
 import Movies from './movies';
 
-const server = process.env.REACT_APP_PORT || 'http://localhost:3001';
+const server = process.env.REACT_APP_BACKEND_URL;
 
 export default class Main extends Component {
   constructor(props) {
@@ -78,7 +78,9 @@ export default class Main extends Component {
                 <Card.Title>Weather</Card.Title>
                 <Weather weather={this.state.weather} />
               </Card>
-              <Card style={{ margin: 'auto', marginBottom: '25px', marginTop: '25px', padding: '10px' }}>
+              <Card
+                style={{ width: '600px', margin: 'auto', marginBottom: '25px', marginTop: '25px', padding: '10px' }}
+              >
                 <Card.Title>Movies</Card.Title>
                 <Movies movies={this.state.movies} />
               </Card>
