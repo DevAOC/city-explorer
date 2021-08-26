@@ -13,7 +13,7 @@ export default class Header extends Component {
             backgroundColor: '#337CAD',
           }}
         >
-          CE
+          City Explorer
         </h1>
       </>
     );
