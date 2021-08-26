@@ -1,8 +1,9 @@
 import { Component } from 'react';
-import Card from 'react-bootstrap/Card';
 import Alert from 'react-bootstrap/Alert';
 import axios from 'axios';
+
 import CityForm from './cityForm';
+import Location from './location';
 import Weather from './weather';
 import Movies from './movies';
 
@@ -53,24 +54,11 @@ export default class Main extends Component {
         {this.state.errorMessage ? (
           <Alert>{this.state.errorMessage}</Alert>
         ) : (
-          this.state.map && (
-            <>
-              <Card style={{ width: '650px', margin: 'auto', marginTop: '25px', marginBottom: '25px' }}>
-                <Card.Img
-                  src={this.state.map}
-                  alt={this.state.location.display_name}
-                  style={{ width: '600px', margin: 'auto', marginTop: '25px' }}
-                />
-                <Card.Body>
-                  <Card.Title>{this.state.location.display_name}</Card.Title>
-                  <Card.Text>Lattitude: {this.state.location.lat}</Card.Text>
-                  <Card.Text>Longitude: {this.state.location.lon}</Card.Text>
-                </Card.Body>
-              </Card>
-              <Weather weather={this.state.weather} />
-              <Movies movies={this.state.movies} />
-            </>
-          )
+          <>
+            <Location location={this.state.location} mapURL={this.state.map} />
+            <Weather weather={this.state.weather} />
+            <Movies movies={this.state.movies} />
+          </>
         )}
       </>
     );
