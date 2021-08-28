@@ -105,3 +105,11 @@ Start time: 2:45 pm
 Finish time: 4 pm
 
 Actual time needed to complete: 1 hour 15 mins
+
+## Lab 10
+
+![WRRC Lab10](./img/lab10-WRRC.png)
+
+### Time Estimates
+
+Name of feature: None
