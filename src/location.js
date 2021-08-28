@@ -4,7 +4,6 @@ import LocationData from './locationData';
 
 export default class Location extends Component {
   render() {
-    console.log(this.props.location);
     return (
       <>
         <Card style={{ width: '650px', margin: 'auto', marginTop: '25px', marginBottom: '25px' }}>
